@@ -40,10 +40,15 @@ header img {
 }
 
 #div-nu-semfundo {
-
-   max-width: 500px;
+   margin-top: 5%;
+   max-width: 45%;
    margin-left: 4%;
 
+}
+
+#div-nu-semfundo img {
+
+   width: 50%;
 }
 
 
@@ -51,7 +56,8 @@ header img {
    font-family: 'Heebo', sans-serif;
    font-size: larger;
    margin-top: 3%;
-   width: 700px;
+   height: 100%;
+   max-height: 305px;
    text-align: justify;
 
 }
