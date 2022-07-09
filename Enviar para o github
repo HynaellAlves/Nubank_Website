@@ -1,0 +1,23 @@
+- Abrir CMD
+
+- Entrar na pasta do projeto via linha de comando
+
+-- inicia um repositório git na pasta do projeto (OBS: se já fez esse comando antes não é necessário executá-lo novamente) --
+
+git init
+
+-- Adiciona todos os arquivos da pasta aberta --
+
+git add .
+
+-- Verifica o status dos arquivos (se precisam ser adicionados, se ja foram adicionados, etc) --
+
+ git status
+
+ -- Adiciona um comentário da atualização no repositório (OBS: sem o commit nem é possível enviar os arquivos) --
+
+ git commit -m "O comentário"
+
+ -- Envia os arquivos já adicionados e comitados para o repositório OBS: nome da branch (nesse caso a minha é "master") --
+
+ git push -u origin "nome da branch"
