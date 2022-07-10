@@ -64,5 +64,6 @@ body {
    max-height: 305px;
    text-align: justify;
    color: white;
+   text-shadow: 2px 2px 5px black;
 
 }
