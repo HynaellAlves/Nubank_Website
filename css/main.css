@@ -1,3 +1,5 @@
+/* Importando fonte do google fontes */
+
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100&display=swap');
 
 * {
@@ -6,12 +8,16 @@
 
 }
 
+/* Adicionando imagem de background da página */
+
 body {
 
    background-image: url('../img/Nu-Background 3.png');
    background-color: #905EB2;
 
 }
+
+/* Ajustando o tamamho das divs e das imagens */
 
 
 .img-meio {
@@ -46,6 +52,8 @@ body {
    margin-left: 25%;
    width: 50%;
 }
+
+/* Ajustando texto de apresentação */
 
 
 #sobre-nu {
