@@ -73,9 +73,20 @@ body {
    background-color: white;
    width: 80%;
    height: 400px;
-   position: relative;
    overflow: hidden;
+   position: relative;
    border-radius: 30px;
+   background: linear-gradient(#7c3ca7, #b997cf);
+   background-image: url('/img/Nu-sede.gif');
+}
+
+.titulo-game {
+   position: absolute;
+   color: black;
+   font-size: large;
+   font-family: 'Heebo', sans-serif;
+   background-color: rgb(224, 13, 13);
+
 }
 
 .nu {
@@ -83,28 +94,29 @@ body {
    width: 80px;
    bottom: 0;
    left: 180px;
-  
+
 }
 
 .pulo {
-   animation: nu-pulo 700ms ease-out;
-   
+   animation: nu-pulo 600ms ease-out;
+
 }
 
-.gastos {
+.ladrao {
    position: absolute;
    width: 95px;
-   bottom: -10px;
-   animation: gastos-animation 2.3s infinite linear;
+   bottom: -3px;
+   transform: scaleX(-1);
+   animation: ladrao-animation 2s infinite linear;
 
 }
 
 /* Animações dos itens do game */
 
-@keyframes gastos-animation {
+@keyframes ladrao-animation {
 
    from {
-      right: -100px;
+      right: -20%;
 
    }
 
@@ -143,4 +155,3 @@ body {
 
    }
 }
-
