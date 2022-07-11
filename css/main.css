@@ -11,9 +11,9 @@
 /* Adicionando imagem de background da página */
 
 body {
-
-   background-image: url('../img/Nu-Background.png');
+   background: url('../img/Nu-Background.png'), url('../img/Nu-Background-branco.png') bottom;
    background-color: #905EB2;
+   background-repeat: no-repeat;
 }
 
 /* Ajustando o tamamho das divs e das imagens */
@@ -69,7 +69,7 @@ body {
 /* Mini game da página */
 
 .mini-game {
-   margin: 30px auto;
+   margin: 10% auto;
    background-color: white;
    width: 80%;
    height: 400px;
