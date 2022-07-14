@@ -1,17 +1,17 @@
 // Colocar uma musica de fundo.
 
-//Capturando elementos do html
+//Importando elementos
 
 const iniciar = document.getElementById('iniciar')
 const reiniciar = document.getElementById('reiniciar')
 const instrucoes = document.getElementById('instrucoes')
 const info = document.getElementById('info')
-const audio = new Audio('./media/01-The Freelancers.wav')
 const nu = document.querySelector('.nu');
 const ladrao = document.querySelector('.ladrao')
 const barco1 = document.querySelector('.barco1')
 const barco2 = document.querySelector('.barco2')
 const barco3 = document.querySelector('.barco3')
+const FxJump = new Audio('./media/FXnu-jump.wav')
 
 
 // Estabelecendo valores iniciais do mini-game
@@ -68,6 +68,7 @@ function start() {
 
    const pulo = () => {
 
+      FxJump.play();
       nu.classList.add('pulo');
 
       setTimeout(() => {
