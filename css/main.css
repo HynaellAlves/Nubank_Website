@@ -80,14 +80,138 @@ body {
    background-image: url('/img/Nu-sede-gif.gif');
 }
 
-.titulo-game {
+/* Botões do menu do mini-game */
+
+#iniciar {
    position: absolute;
-   color: black;
-   font-size: large;
+   width: 12%;
+   height: 35px;
+   top: 130px;
+   left: 26%;
+   background-color: #820AD1;
+   font-size: 18px;
    font-family: 'Heebo', sans-serif;
-   background-color: rgb(224, 13, 13);
+   font-weight: bolder;
+   color: white;
+   border-radius: 15px;
+   border: none;
+   outline: none;
 
 }
+
+#iniciar:hover {
+   position: absolute;
+   width: 15%;
+   height: 35px;
+   top: 130px;
+   left: 24.5%;
+   background-color: #9900ff;
+   font-size: 18px;
+   font-family: 'Heebo', sans-serif;
+   font-weight: bolder;
+   color: white;
+   border-radius: 15px;
+
+}
+
+#iniciar:active {
+   height: 35px;
+   background-color: #6200ff;
+   border-radius: 15px;
+}
+
+#reiniciar {
+   position: absolute;
+   width: 12%;
+   height: 35px;
+   top: 130px;
+   left: 44.5%;
+   background-color: #820AD1;
+   font-size: 18px;
+   font-family: 'Heebo', sans-serif;
+   font-weight: bolder;
+   color: white;
+   border-radius: 15px;
+   border: none;
+   outline: none;
+
+}
+
+#reiniciar:hover {
+   position: absolute;
+   width: 15%;
+   height: 35px;
+   top: 130px;
+   left: 43%;
+   background-color: #9900ff;
+   font-size: 18px;
+   font-family: 'Heebo', sans-serif;
+   font-weight: bolder;
+   color: white;
+   border-radius: 15px;
+
+}
+
+#reiniciar:active {
+   height: 35px;
+   background-color: #6200ff;
+   border-radius: 15px;
+}
+
+#instrucoes {
+   position: absolute;
+   width: 12%;
+   height: 35px;
+   top: 130px;
+   left: 63%;
+   background-color: #820AD1;
+   font-size: 18px;
+   font-family: 'Heebo', sans-serif;
+   font-weight: bolder;
+   color: white;
+   border-radius: 15px;
+   border: none;
+   outline: none;
+
+}
+
+#instrucoes:hover {
+   position: absolute;
+   width: 15%;
+   height: 35px;
+   top: 130px;
+   left: 61.5%;
+   background-color: #9900ff;
+   font-size: 18px;
+   font-family: 'Heebo', sans-serif;
+   font-weight: bolder;
+   color: white;
+   border-radius: 15px;
+
+}
+
+#instrucoes:active {
+   height: 35px;
+   background-color: #6200ff;
+   border-radius: 15px;
+}
+
+#info {
+
+   position: absolute;
+   font-family: 'Heebo', sans-serif;
+   text-shadow: 1px 1px 3px #3f049e;
+   font-size: 18px;
+   text-align: center;
+   font-weight: bolder;
+   left: 35%;
+   top: 170px;
+
+
+}
+
+
+/* Elementos do mini-game */
 
 .nu {
    position: absolute;
@@ -135,7 +259,7 @@ body {
 
 }
 
-/* Animações dos itens do game */
+/* Animações dos elementos do mini-game */
 
 @keyframes ladrao-animation {
 

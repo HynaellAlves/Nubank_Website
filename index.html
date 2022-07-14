@@ -8,19 +8,13 @@
 
    <link rel="icon" href="./img/favicon-32x32.png" sizes="32x32" type="image/x-icon">
    <link rel="stylesheet" href="./css/main.css">
-   <script src="./js/script.js" defer></script>
+   <script src="./js/mini-game.js" defer></script>
 
 
    <title>Nubank Web</title>
 </head>
 
 <body>
-
-   <!-- Audio da pagina -->
-
-   <audio id="audio-page" loop>
-      <source src="./media/01-The Freelancers.wav" type="audio/wav">
-   </audio>
 
    <!-- Div das imagens do Nubank -->
 
@@ -70,9 +64,21 @@
 
    </div>
 
+   <!-- Mini game da página -->
+
    <div class="mini-game">
-      <img class="barco3"  src="./img/barco3.png">
+      <label id="info">
+         1 - Aperte qualquer tecla para pular
+         <br>
+         2- Pule para que o ladrão não roube o cartão
+         <br>
+         3- Passará de nível a cada 100 pts
+      </label>
+      <img class="barco3" src="./img/barco3.png">
       <img class="barco2" src="./img/barco2.png">
+      <button id="iniciar">Iniciar</button>
+      <button id="reiniciar">Reiniciar</button>
+      <button value="desativado" id="instrucoes">Instruções</button>
       <img class="barco1" src="./img/barco.png">
       <img class="nu" src="./img/Nu-cartao-gif.gif">
       <img class="ladrao" src="./img/Ladrao.gif">
