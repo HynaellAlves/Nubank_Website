@@ -66,10 +66,19 @@ body {
 
 }
 
+.nu-videos {
+   position: relative;
+   top: 200px;
+   left: 15%;
+   width: 70%;
+   height: 450px;
+   border-radius: 10px;
+
+}
 /* Mini game da página */
 
 .mini-game {
-   margin: 10% auto;
+   margin: 30% auto 10% auto;
    background-color: white;
    width: 80%;
    height: 400px;

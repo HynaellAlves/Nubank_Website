@@ -8,9 +8,6 @@
 
    <link rel="icon" href="./img/favicon-32x32.png" sizes="32x32" type="image/x-icon">
    <link rel="stylesheet" href="./css/main.css">
-   <script src="./js/mini-game.js" defer></script>
-
-
    <title>Nubank Web</title>
 </head>
 
@@ -64,9 +61,20 @@
 
    </div>
 
+   <iframe class="nu-videos" src="https://www.youtube.com/embed/PslySEBNkhs" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+
    <!-- Mini game da página -->
 
    <div class="mini-game">
+      <audio></audio>
+      <img class="barco3" src="./img/barco3.png">
+      <img class="barco2" src="./img/barco2.png">
+      <button id="iniciar">Iniciar</button>
+      <button id="reiniciar">Reiniciar</button>
+      <button value="desativado" id="instrucoes">Instruções</button>
+      <img class="barco1" src="./img/barco.png">
       <label id="info">
          1 - Aperte qualquer tecla para pular
          <br>
@@ -74,16 +82,13 @@
          <br>
          3- Passará de nível a cada 100 pts
       </label>
-      <img class="barco3" src="./img/barco3.png">
-      <img class="barco2" src="./img/barco2.png">
-      <button id="iniciar">Iniciar</button>
-      <button id="reiniciar">Reiniciar</button>
-      <button value="desativado" id="instrucoes">Instruções</button>
-      <img class="barco1" src="./img/barco.png">
       <img class="nu" src="./img/Nu-cartao-gif.gif">
       <img class="ladrao" src="./img/Ladrao.gif">
 
    </div>
+
+   <script src="./js/mini-game.js"></script>
+   <script src="./js/Audio.js"></script>
 
 </body>
 

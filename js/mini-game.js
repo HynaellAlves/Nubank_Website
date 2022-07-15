@@ -1,27 +1,39 @@
-// Colocar uma musica de fundo.
-
 //Importando elementos
+
+//Menu
 
 const iniciar = document.getElementById('iniciar')
 const reiniciar = document.getElementById('reiniciar')
 const instrucoes = document.getElementById('instrucoes')
 const info = document.getElementById('info')
+
+//Itens e personagens
+
 const nu = document.querySelector('.nu');
 const ladrao = document.querySelector('.ladrao')
 const barco1 = document.querySelector('.barco1')
 const barco2 = document.querySelector('.barco2')
 const barco3 = document.querySelector('.barco3')
+
+//Media Fx
+
+const FxGameOver = new Audio('./media/game-over.wav');
+FxGameOver.volume = 0.1;
 const FxJump = new Audio('./media/FXnu-jump.wav')
+FxJump.volume = 0.1;
 
-
-// Estabelecendo valores iniciais do mini-game
+// Estabelecendo valores iniciais dos elementos do mini-game
 
 info.style.opacity = 0;
 reiniciar.style.opacity = 0;
 reiniciar.disabled = true;
 ladrao.style.animation = 'none';
 ladrao.style.opacity = 0;
+
+// Função que retorna se as info se encontram ativadas ou desativadas
+
 const information = (validation) => {
+
 
    validation = instrucoes.value;
 
@@ -44,17 +56,23 @@ const information = (validation) => {
 
 }
 
-// Escutador de evento do botão Iniciar e reiniciar
+// Escutador de evento do Menu
 
 iniciar.addEventListener('click', start)
 reiniciar.addEventListener('click', restart)
 instrucoes.addEventListener('click', information)
 
+// Inicia o mini-game
 
 function start() {
 
-   validation = 'desativado'
-   info.style.opacity = 0;
+   Tracks.start();
+
+   instrucoes.value = 'ativado'
+   information();
+
+   // Resetando Menu e elementos
+
    instrucoes.style.opacity = 0;
    instrucoes.disabled = true;
    reiniciar.style.opacity = 0;
@@ -69,6 +87,7 @@ function start() {
    const pulo = () => {
 
       FxJump.play();
+
       nu.classList.add('pulo');
 
       setTimeout(() => {
@@ -90,6 +109,8 @@ function start() {
 
       if (ladraoPosition <= 228 && ladraoPosition > 140 && nuPosition < 63) {
 
+         FxGameOver.play();
+
          ladrao.style.animation = 'none';
          ladrao.style.left = `${ladraoPosition}px`;
 
@@ -110,6 +131,8 @@ function start() {
 
          reiniciar.style.opacity = 1;
          reiniciar.disabled = false;
+         FxJump.volume = 0;
+         Tracks.pause();
 
       }
 
@@ -123,6 +146,8 @@ function start() {
 
 
 }
+
+// Recarrega o site e restarta o game
 
 function restart() {
 
