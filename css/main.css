@@ -11,9 +11,8 @@
 /* Adicionando imagem de background da página */
 
 body {
-   background: url('../img/Nu-Background.png'), url('../img/Nu-Background-branco.png') bottom;
+   background: url('../img/Nu-Background.png') no-repeat scroll, url('../img/Nu-Background-branco.png') bottom fixed;
    background-color: #905EB2;
-   background-repeat: no-repeat;
 }
 
 /* Ajustando o tamamho das divs e das imagens */
@@ -23,6 +22,7 @@ body {
    width: 100%;
    margin-top: 4%;
    display: flex;
+   margin-bottom: 20%;
 
 }
 
@@ -51,6 +51,43 @@ body {
    width: 50%;
 }
 
+.img-bottom {
+   display: flex;
+   width: 100%;
+}
+
+.nu-cartoes {
+
+   max-width: 47%;
+
+}
+
+.sobre-cartao {
+position: static;
+   font-family: 'Heebo', sans-serif;
+   font-size: 20px;
+   margin-left: 3%;
+   text-align: justify;
+   height: 100%;
+   max-width: 49%;
+   font-weight: bolder;
+
+}
+
+.sobre-cartao p {
+
+   text-shadow: 1px 1px 5px black;
+   font-size: 43px;
+
+
+}
+
+.sobre-cartao p label {
+
+   font-size: 18px;
+
+}
+
 /* Ajustando texto de apresentação */
 
 
@@ -59,7 +96,6 @@ body {
    font-size: 17px;
    margin-top: 3%;
    height: 100%;
-   max-height: 305px;
    text-align: justify;
    color: white;
    text-shadow: 2px 2px 5px black;
@@ -67,26 +103,51 @@ body {
 }
 
 .nu-videos {
-   position: relative;
-   top: 200px;
-   left: 15%;
    width: 70%;
+   border-radius: 10px;
    height: 450px;
+   background: linear-gradient(#7c3ca7, #b997cf);
+   margin: 0 auto;
+   margin-bottom: 20%;
+
+}
+
+.nu-videos iframe {
+
+   width: 100%;
+   height: 100%;
    border-radius: 10px;
 
 }
+
 /* Mini game da página */
 
 .mini-game {
-   margin: 30% auto 10% auto;
    background-color: white;
    width: 80%;
    height: 400px;
    overflow: hidden;
    position: relative;
+   left: 10%;
    border-radius: 30px;
    background: linear-gradient(#7c3ca7, #b997cf);
    background-image: url('/img/Nu-sede-gif.gif');
+   margin-bottom: 20%;
+}
+
+#contador {
+   top: 4%;
+   left: 83%;
+   position: absolute;
+   font-family: 'Heebo', sans-serif;
+   font-weight: bolder;
+   background-color: #820AD1;
+   color: white;
+   padding-top: 8px;
+   text-align: center;
+   border-radius: 10px;
+   width: 110px;
+   height: 35px;
 }
 
 /* Botões do menu do mini-game */

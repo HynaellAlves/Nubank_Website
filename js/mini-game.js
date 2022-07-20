@@ -6,6 +6,7 @@ const iniciar = document.getElementById('iniciar')
 const reiniciar = document.getElementById('reiniciar')
 const instrucoes = document.getElementById('instrucoes')
 const info = document.getElementById('info')
+const lblcontador = document.getElementById('contador')
 
 //Itens e personagens
 
@@ -107,6 +108,16 @@ function start() {
       const ladraoPosition = ladrao.offsetLeft;
       const nuPosition = +window.getComputedStyle(nu).bottom.replace('px', '');
 
+      const contar = setInterval(() => {
+
+         valor++
+         console.log(valor);
+
+      }, 1000);
+
+
+
+
       if (ladraoPosition <= 228 && ladraoPosition > 140 && nuPosition < 63) {
 
          FxGameOver.play();
@@ -128,6 +139,7 @@ function start() {
          barco3.style.left = `${barco3Position}px`;
 
          clearInterval(loop);
+         clearInterval(contar);
 
          reiniciar.style.opacity = 1;
          reiniciar.disabled = false;
@@ -154,5 +166,3 @@ function restart() {
    window.location.reload()
 
 }
-
-
