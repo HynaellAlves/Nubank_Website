@@ -108,15 +108,6 @@ function start() {
       const ladraoPosition = ladrao.offsetLeft;
       const nuPosition = +window.getComputedStyle(nu).bottom.replace('px', '');
 
-      const contar = setInterval(() => {
-
-         valor++
-         console.log(valor);
-
-      }, 1000);
-
-
-
 
       if (ladraoPosition <= 228 && ladraoPosition > 140 && nuPosition < 63) {
 
@@ -139,7 +130,6 @@ function start() {
          barco3.style.left = `${barco3Position}px`;
 
          clearInterval(loop);
-         clearInterval(contar);
 
          reiniciar.style.opacity = 1;
          reiniciar.disabled = false;

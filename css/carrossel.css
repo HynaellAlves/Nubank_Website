@@ -1,0 +1,82 @@
+@import url(./main.css);
+
+#bnt-carrossel {
+   position: absolute;
+   background-color: #820AD1;
+   bottom: 8%;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   outline: none;
+   left: 50%;
+   background: url('../img/bnt-carrossel.png') center;
+   cursor: pointer;
+}
+
+.carrosel {
+   position: relative;
+   overflow: hidden;
+   display: flex;
+   width: 100%;
+}
+
+#nu-cartoes {
+   max-width: 47%;
+
+}
+
+#sobre-cartao {
+   font-family: 'Heebo', sans-serif;
+   font-size: 20px;
+   margin-left: 3%;
+   text-align: justify;
+   height: 100%;
+   max-width: 49%;
+   font-weight: bolder;
+
+}
+
+#sobre-cartao p {
+
+   text-shadow: 1px 1px 5px black;
+   font-size: 43px;
+
+
+}
+
+#sobre-cartao p label {
+
+   font-size: 18px;
+
+}
+
+#img-carrossel2 {
+   position: absolute;
+   max-width: 52%;
+   height: 450px;
+   left: 1%;
+   border-radius: 20px;
+
+
+}
+
+#sobre-cartao2 {
+   position: absolute;
+   left: 54%;
+   font-family: 'Heebo', sans-serif;
+   font-size: 20px;
+   text-align: justify;
+   height: 100%;
+   max-width: 45%;
+   font-weight: bolder;
+
+}
+
+#sobre-cartao2 p {
+
+   text-shadow: 1px 1px 5px black;
+   font-size: 43px;
+
+}
+
+/* Adicionar animação do carrossel */

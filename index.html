@@ -6,8 +6,10 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <link rel="icon" href="./img/favicon-32x32.png" sizes="32x32" type="image/x-icon">
+   <link rel="icon" href="./img/Nu-Logo_customizada.png" sizes="32x32" type="image/x-icon">
    <link rel="stylesheet" href="./css/main.css">
+   <link rel="stylesheet" href="./css/carrossel.css">
+   <link rel="stylesheet" href="./css/mini-game.css">
    <title>Nubank Web</title>
 </head>
 
@@ -62,8 +64,7 @@
    </div>
 
    <div class="nu-videos">
-      <iframe  src="https://www.youtube.com/embed/PslySEBNkhs" title="YouTube video player"
-         frameborder="0"
+      <iframe src="https://www.youtube.com/embed/PslySEBNkhs" title="YouTube video player" frameborder="0"
          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
          allowfullscreen></iframe>
    </div>
@@ -92,9 +93,9 @@
 
    </div>
 
-   <div class="img-bottom">
-      <img class="nu-cartoes" src="./img/Nu-cartao.png">
-      <strong class="sobre-cartao">
+   <div class="carrosel">
+      <img value = 'Sim' id="nu-cartoes" src="./img/Nu-cartao.png">
+      <strong value = 1 id="sobre-cartao">
          <p>Cartão Internacional <br> Nubank <br> Mastercard<label>®</label></p>
          Facilidade e segurança para você em mais de 30 milhões de estabelecimentos, além dos benefícios Mastercard.
          <br>
@@ -102,10 +103,30 @@
          <p>E tudo isso é de graça sim.</p>
          Burocracia custa dinheiro. Então somos eficientes para você não ter que pagar nada.
       </strong>
+
+      <img value = 2 id="img-carrossel2" src="./img/nu-carrossel-img2.jpg">
+      <strong value = 2 id="sobre-cartao2">
+         <p>Somos diferentes</p>
+
+         Somos uma empresa de tecnologia com espírito jovem e inovador que desenvolve soluções simples, seguras e
+         digitais para sua vida financeira.
+         <br>
+         <br>
+         O jeito NU de fazer as coisas nasceu do inconformismo e se transformou numa força para construir produtos
+         justos e de forma transparente para você.
+         <br>
+         <br>
+         Seu dinheiro vai estar na nossa conta, mas o controle dele será todo seu. E se você precisar de ajuda,
+         estaremos aqui, 24h por dia, prontos para ajudar com os nossos especialistas.
+
+      </strong>
+
+      <button id="bnt-carrossel"></button>
    </div>
 
    <script src="./js/mini-game.js"></script>
    <script src="./js/Audio.js"></script>
+   <script src="./js/carrossel.js"></script>
 
 </body>
 
