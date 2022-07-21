@@ -7,6 +7,7 @@ const reiniciar = document.getElementById('reiniciar')
 const instrucoes = document.getElementById('instrucoes')
 const info = document.getElementById('info')
 const lblcontador = document.getElementById('contador')
+var contar = 0;
 
 //Itens e personagens
 
@@ -18,7 +19,7 @@ const barco3 = document.querySelector('.barco3')
 
 //Media Fx
 
-const FxGameOver = new Audio('./media/game-over.wav');
+const FxGameOver = new Audio('./media/Fxgame-over.wav');
 FxGameOver.volume = 0.1;
 const FxJump = new Audio('./media/FXnu-jump.wav')
 FxJump.volume = 0.1;
@@ -107,6 +108,10 @@ function start() {
       const barco3Position = barco3.offsetLeft;
       const ladraoPosition = ladrao.offsetLeft;
       const nuPosition = +window.getComputedStyle(nu).bottom.replace('px', '');
+
+      contar = toString(contar + 1);
+      console.log(contar);
+      //lblcontador.innerHTML(contar);
 
 
       if (ladraoPosition <= 228 && ladraoPosition > 140 && nuPosition < 63) {
