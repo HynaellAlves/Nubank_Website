@@ -35,6 +35,8 @@ const loop = setInterval(() => {
 
 function trocar() {
 
+   alterar.disabled = true;
+
    if (valueImg == 1 && valueText == 1) {
 
       img1.classList.add('avancar');
@@ -53,6 +55,7 @@ function trocar() {
 
          img1.classList.remove('avancar');
          text1.classList.remove('avancar');
+         alterar.disabled = false;
 
       }, 1000);
 
@@ -77,12 +80,12 @@ function trocar() {
 
          img2.classList.remove('avancar');
          text2.classList.remove('avancar');
+         alterar.disabled = false;
 
       }, 1000);
 
       valueImg = 3;
       valueText = 3;
-
 
    } else {
 
@@ -102,6 +105,7 @@ function trocar() {
 
          img3.classList.remove('avancar');
          text3.classList.remove('avancar');
+         alterar.disabled = false;
 
       }, 1000);
 
@@ -109,6 +113,7 @@ function trocar() {
       valueText = 1;
 
    }
+
 };
 
 // Escutador de evento para o click no botão de troca
