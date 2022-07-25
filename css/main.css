@@ -84,3 +84,22 @@ body {
    border-radius: 10px;
 
 }
+
+/* Estilizando scrollbar */
+
+::-webkit-scrollbar {
+
+   background-color: #6d2997;
+   width: 12px;
+   border: solid 0.3px black;
+   border-radius: 8px;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+   background-color: #3b065f;
+   border: solid 0.3px black;
+   border-radius: 8px;
+
+}
