@@ -7,7 +7,12 @@ const reiniciar = document.getElementById('reiniciar')
 const instrucoes = document.getElementById('instrucoes')
 const info = document.getElementById('info')
 const lblcontador = document.getElementById('contador')
-var contar = 0;
+
+// Variáveis da Meta
+
+var pontos = 0;
+var ganhou = false;
+var perdeu = false;
 
 //Itens e personagens
 
@@ -23,6 +28,8 @@ const FxGameOver = new Audio('./media/Fxgame-over.wav');
 FxGameOver.volume = 0.1;
 const FxJump = new Audio('./media/FXnu-jump.wav')
 FxJump.volume = 0.1;
+const Fxwin = new Audio('./media/Fxwin.wav');
+FxGameOver.volume = 0.1;
 
 // Estabelecendo valores iniciais dos elementos do mini-game
 
@@ -35,7 +42,6 @@ ladrao.style.opacity = 0;
 // Função que retorna se as info se encontram ativadas ou desativadas
 
 const information = (validation) => {
-
 
    validation = instrucoes.value;
 
@@ -54,7 +60,6 @@ const information = (validation) => {
    }
 
    instrucoes.value = validation;
-
 
 }
 
@@ -95,6 +100,7 @@ function start() {
       setTimeout(() => {
 
          nu.classList.remove('pulo');
+         meta();
 
       }, 700);
    }
@@ -108,11 +114,6 @@ function start() {
       const barco3Position = barco3.offsetLeft;
       const ladraoPosition = ladrao.offsetLeft;
       const nuPosition = +window.getComputedStyle(nu).bottom.replace('px', '');
-
-      contar = toString(contar + 1);
-      console.log(contar);
-      //lblcontador.innerHTML(contar);
-
 
       if (ladraoPosition <= 228 && ladraoPosition > 140 && nuPosition < 63) {
 
@@ -140,17 +141,42 @@ function start() {
          reiniciar.disabled = false;
          FxJump.volume = 0;
          Tracks.pause();
+         perdeu = true;
+         meta();
+
+      } else if (ganhou == true) {
+
+         Fxwin.play();
+
+         ladrao.style.animation = 'none';
+         ladrao.style.left = `${ladraoPosition}px`;
+
+         nu.style.animation = 'none';
+         nu.style.bottom = `${nuPosition}px`;
+
+         nu.src = './img/game-over.png';
+         nu.style.width = '50px';
+
+         barco1.style.animation = 'none';
+         barco1.style.left = `${barco1Position}px`;
+         barco2.style.animation = 'none';
+         barco2.style.left = `${barco2Position}px`;
+         barco2.style.animation = 'none';
+         barco3.style.left = `${barco3Position}px`;
+
+         clearInterval(loop);
+
+         reiniciar.style.opacity = 1;
+         reiniciar.disabled = false;
+         FxJump.volume = 0;
+         Tracks.pause();
 
       }
-
-
    }, 10);
 
    // Escutador de eventos que nesse caso aguarda o pressionamento de qualquer tecla
 
    document.addEventListener('keydown', pulo);
-
-
 
 }
 
@@ -161,3 +187,31 @@ function restart() {
    window.location.reload()
 
 }
+
+// Função para verificar se ganhou
+
+function meta() {
+
+   if (ganhou == false) {
+
+      pontos++;
+
+   }
+
+   if (pontos / 100 < 5) {
+
+      lblcontador.innerHTML = pontos + ' pts';
+
+   } else {
+
+      lblcontador.innerHTML = 'MAX';
+      ganhou = true;
+
+   }
+
+   if (perdeu == true) {
+
+      lblcontador.innerHTML = 'Ops ...';
+
+   }
+};
