@@ -11,7 +11,7 @@
 /* Adicionando imagem de background da página */
 
 body {
-   background: url('../img/Nu-Background.png') no-repeat scroll, url('../img/Nu-Background-branco.png') bottom fixed;
+   background: url('../img/Nu-Background-preto.png') no-repeat scroll, url('../img/Nu-Background-branco.png') bottom fixed;
    background-color: #905EB2;
 }
 
@@ -40,7 +40,6 @@ body {
 }
 
 #div-nu-semfundo {
-   margin-top: 5%;
    max-width: 45%;
    margin-left: 4%;
 
@@ -57,11 +56,27 @@ body {
 #sobre-nu {
    font-family: 'Heebo', sans-serif;
    font-size: 17px;
-   margin-top: 3%;
+   margin-top: -8%;
+   margin-left: 11%;
+   width: 80%;
    height: 100%;
    text-align: justify;
    color: white;
    text-shadow: 2px 2px 5px black;
+
+}
+
+.enfase {
+
+font-size: 27px;
+
+}
+
+.enfase2 {
+font-size: 27px;
+color: #6d2997;
+text-shadow: 0 0 10px rgb(220, 27, 226);
+
 
 }
 
@@ -85,6 +100,14 @@ body {
 
 }
 
+.rodape {
+
+width: 100%;
+height: 300px;
+background-color: black;
+
+}
+
 /* Estilizando scrollbar */
 
 ::-webkit-scrollbar {
@@ -92,7 +115,6 @@ body {
    background-color: #6d2997;
    width: 12px;
    border: solid 0.3px black;
-   border-radius: 8px;
 
 }
 
