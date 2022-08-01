@@ -11,9 +11,9 @@
 /* Adicionando imagem de background da página */
 
 body {
-   background: url('../img/Nu-Background-preto.png') no-repeat scroll, url('../img/Nu-Background-branco.png') bottom fixed;
+   background: url('../img/Nu-Background.png') no-repeat scroll, url('../img/Nu-Background-branco.png') bottom fixed;
    background-size: contain, cover;
-   background-color: #905EB2;
+   background-color: black;
 }
 
 /* Ajustando o tamamho das divs e das imagens */
@@ -60,7 +60,7 @@ body {
    margin-top: -11%;
    margin-left: 11%;
    width: 80%;
-   height: 100%;
+   height: 60%;
    text-align: justify;
    color: white;
    text-shadow: 2px 2px 5px black;
@@ -75,8 +75,8 @@ body {
 
 .enfase2 {
    font-size: 27px;
-   color: #8a1ece;
-   text-shadow: 0 0 10px rgb(242, 0, 250);
+   color: #b43bff;
+   text-shadow: 0 0 10px rgb(142, 62, 247);
 
 
 }
@@ -160,7 +160,6 @@ body {
 }
 
 .rodape strong {
-   border-right: solid black;
    padding: 40px 0;
    font-size: 18px;
    color: white;
@@ -181,7 +180,7 @@ body {
 
 ::-webkit-scrollbar {
 
-   background-color: #6d2997;
+   background-color: #b1b1b1;
    width: 15px;
    border: solid 0.3px black;
 
@@ -191,6 +190,5 @@ body {
 
    background-color: #3b065f;
    border: solid 0.3px black;
-   border-radius: 5px;
 
 }
