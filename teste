@@ -1,0 +1,50 @@
+ <!-- Elementos 1 do carrossel -->
+ 
+               Facilidade e segurança para você em mais de 30 milhões de estabelecimentos, além dos benefícios
+               Mastercard.
+               <br>
+               <br>
+               O cartão de crédito Nubank é o mais bem avaliado pelos clientes: 9 entre 10 recomendam.
+               <br>
+               <br>
+               E tudo isso é de graça sim.
+               Burocracia custa dinheiro. Então somos eficientes para você não ter que pagar nada.
+
+
+
+
+
+
+
+
+      <!-- Elementos 2 do carrossel -->
+
+      <img src="./img/nu-carrossel-img2.jpg">
+      <strong class="sobre-cartao2">
+         <p>Somos diferentes</p>
+
+         Somos uma empresa de tecnologia com espírito jovem e inovador que desenvolve soluções simples, seguras e
+         digitais para sua vida financeira.
+         <br>
+         <br>
+         O jeito NU de fazer as coisas nasceu do inconformismo e se transformou numa força para construir produtos
+         justos e de forma transparente para você.
+         <br>
+         <br>
+         Seu dinheiro vai estar na nossa conta, mas o controle dele será todo seu. E se você precisar de ajuda,
+         estaremos aqui, 24h por dia, prontos para ajudar com os nossos especialistas.
+
+      </strong>
+
+      <!-- Elementos 3 do carrossel -->
+
+      <img src="./img/Nubank-office.jpg">
+      <strong class="sobre-cartao3">
+         <p>Construído <br> pelos <br> inconformados</p>
+         Procuramos pessoas para simplificar o mundo e reinventar o possível com a gente. Pessoas que nos inspirem e
+         inspirem outras tantas a partir de design, tecnologia e um atendimento sem igual.
+         <br>
+         <br>
+         Se você está cansado de ver as mesmas soluções para problemas antigos e quer que o mundo conheça novos jeitos
+         de transformar a vida das pessoas, vem para cá construir o futuro com a gente.
+      </strong>

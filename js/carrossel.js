@@ -1,121 +1,102 @@
 // Capturando elementos de imagem e texto
-
-const img1 = document.querySelector('.img-carrossel');
-const text1 = document.querySelector('.sobre-cartao');
-const img2 = document.querySelector('.img-carrossel2');
-const text2 = document.querySelector('.sobre-cartao2');
-const img3 = document.querySelector('.img-carrossel3');
-const text3 = document.querySelector('.sobre-cartao3');
-const alterar = document.querySelector('.bnt-carrossel');
-
-// Criando variável e atribuindo valor inicial
-
-var valueImg = 1;
-var valueText = 1;
-
-// Atribuindo valores iniciais dos elementos
-
-img1.style.opacity = 1;
-text1.style.opacity = 1;
-img2.style.opacity = 0;
-text2.style.opacity = 0;
-img3.style.opacity = 0;
-text3.style.opacity = 0;
-
-// Troca de elementos automática com intervalo de 20s
-
-const loop = setInterval(() => {
-
-   trocar();
+const img = document.querySelector('.div-carrossel-img img')
+const carrossel = document.querySelector('.carrossel-div')
+const text = document.getElementById('text')
+const titulo = document.querySelector('.titulo')
+const alterar = document.querySelector('.bnt-carrossel')
+var contador = 1
 
 
-}, 20000)
-
-// Função que efetua de fato a troca entre os elementos
-
-function trocar() {
+function transition() {
 
    alterar.disabled = true;
 
-   if (valueImg == 1 && valueText == 1) {
 
-      img1.classList.add('avancar');
-      text1.classList.add('avancar');
+   if (contador == 1) {
 
-      const n = setTimeout(() => {
-
-         img2.style.opacity = 1;
-         text2.style.opacity = 1;
-         img1.style.opacity = 0;
-         text1.style.opacity = 0;
-
-      }, 1000)
+      animation_transition()
 
       setTimeout(() => {
 
-         img1.classList.remove('avancar');
-         text1.classList.remove('avancar');
-         alterar.disabled = false;
+         insert_text()
+         img.src = './img/nu-carrossel-img2.jpg';
+         contador = 2;
 
-      }, 1000);
+      }, 1900)
 
-      valueImg = 2;
-      valueText = 2;
 
-   } else if (valueImg == 2 && valueText == 2) {
 
-      img2.classList.add('avancar');
-      text2.classList.add('avancar');
 
-      const n = setTimeout(() => {
 
-         img3.style.opacity = 1;
-         text3.style.opacity = 1;
-         img2.style.opacity = 0;
-         text2.style.opacity = 0;
+   } else if (contador == 2) {
 
-      }, 1000)
+      animation_transition()
 
       setTimeout(() => {
 
-         img2.classList.remove('avancar');
-         text2.classList.remove('avancar');
-         alterar.disabled = false;
+         insert_text()
+         img.src = './img/Nubank-office.jpg';
+         contador = 3;
 
-      }, 1000);
+      }, 1900)
 
-      valueImg = 3;
-      valueText = 3;
+
+
 
    } else {
 
-      img3.classList.add('avancar');
-      text3.classList.add('avancar');
-
-      const n = setTimeout(() => {
-
-         img1.style.opacity = 1;
-         text1.style.opacity = 1;
-         img3.style.opacity = 0;
-         text3.style.opacity = 0;
-
-      }, 1000)
+      animation_transition()
 
       setTimeout(() => {
 
-         img3.classList.remove('avancar');
-         text3.classList.remove('avancar');
-         alterar.disabled = false;
+         insert_text()
+         img.src = './img/Nu-cartao.png';
+         contador = 1;
 
-      }, 1000);
+      }, 1900)
 
-      valueImg = 1;
-      valueText = 1;
+
 
    }
 
-};
+   alterar.disabled = false;
 
-// Escutador de evento para o click no botão de troca
+}
 
-alterar.addEventListener('click', trocar);
+function animation_transition() {
+
+   carrossel.classList.add('avancar')
+
+   setTimeout(() => {
+
+      carrossel.classList.remove('avancar')
+
+   }, 2000)
+
+}
+
+function insert_text() {
+
+   if (contador == 1) {
+
+      text.innerHTML = 'teste';
+
+   } else if (contador == 2) {
+
+      text.innerHTML = 'teste 2';
+
+   } else {
+
+      text.innerHTML = 'teste 3';
+
+   }
+
+}
+
+const loop = setInterval(() => {
+
+   transition();
+
+}, 12000)
+
+alterar.addEventListener('click', transition)

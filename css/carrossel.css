@@ -1,166 +1,110 @@
 @import url(./main.css);
 
-/* Botão de transição entre os cotainers do carrossel */
-
-.button {
-   width: 100%;
-   height: 50px;
-   margin-bottom: 5%;
-
-}
-
-.bnt-carrossel {
-   margin-left: 50%;
-   background-color: #820AD1;
-   width: 50px;
-   height: 50px;
-   border-radius: 50%;
-   background: url('../img/bnt-carrossel.png') center;
-   cursor: pointer;
-   border: solid black 2px;
-}
-
-.bnt-carrossel:focus {
-   background-color: #b13bff;
-   background-image: none;
-   width: 50px;
-   height: 50px;
-   border-radius: 50%;
-   left: 50%;
-   cursor: pointer;
-   border: solid black 2px;
-}
 
 /* Container geral do Carrossel */
 
-.carrosel {
-   display: flex;
+.carrossel {
+   overflow: hidden;
+   position: relative;
+   margin-top: 10%;
    width: 100%;
    height: 600px;
+   background: linear-gradient(to left, #a455ff, #bf9ce7 );
+   
 }
 
-/* Ajustando Imagens dos sub containers do carrossel */
-
-.img-carrossel {
-   top: 1700px;
+.carrossel-div {
+   overflow: hidden;
+   display: flex;
    position: absolute;
-   width: 47%;
-   height: 600px;
+   width: 100%;
+   height: 100%;
+}
+
+/*  */
+
+.div-carrossel-img {
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 50%;
+   max-height: 100%;
 
 }
 
-.img-carrossel2 {
-   top: 1700px;
-   position: absolute;
-   max-width: 57%;
-   left: 2%;
-   height: 450px;
-   border-radius: 20px;
+.div-carrossel-img img {
+   border-radius: 5%;
+   width: 90%;
+   height: 70%;
 
 }
 
-.img-carrossel3 {
-   top: 1700px;
-   position: absolute;
-   max-width: 52%;
-   height: 450px;
-   left: 1%;
-   border-radius: 20px;
+/*  */
+
+.div-carrossel-text {
+   padding: 5% 4%;
+   overflow: hidden;
+   width: 50%;
+   max-width: 50%;
+   max-height: 100%;
 
 }
 
-/* Ajustando texto dos sub containers */
-
-
-.sobre-cartao {
-   top: 1700px;
-   position: absolute;
-   font-family: 'Heebo', sans-serif;
-   font-size: 20px;
-   text-align: justify;
-   max-width: 40%;
-   font-weight: bolder;
-   left: 55%;
-   margin-top: 2%;
-
-}
-
-.sobre-cartao p {
-
-   text-shadow: 1px 1px 5px black;
-   font-size: 43px;
-
-
-}
-
-.sobre-cartao p label {
-
-   font-size: 18px;
-
-}
-
-.sobre-cartao2 {
-   top: 1700px;
-   position: absolute;
-   left: 56%;
-   font-family: 'Heebo', sans-serif;
-   font-size: 20px;
-   text-align: justify;
-   max-width: 40%;
-   font-weight: bolder;
-
-}
-
-.sobre-cartao2 p {
-
-   text-shadow: 1px 1px 5px black;
+.titulo {
    font-size: 43px;
 
 }
 
-.sobre-cartao3 {
-   top: 1700px;
-   position: absolute;
-   left: 54%;
+.carrossel-text {
+   padding: 3%;
    font-family: 'Heebo', sans-serif;
-   font-size: 20px;
+   font-size: 17px;
    text-align: justify;
-   max-width: 42%;
    font-weight: bolder;
-
-}
-
-.sobre-cartao3 p {
-
    text-shadow: 1px 1px 5px black;
-   font-size: 43px;
 
 }
 
+/* Botão de transição entre os cotainers do carrossel */
+
+.bnt-carrossel {
+   position: absolute;
+   background-color: #820AD1;
+   width: 4%;
+   height: 8.4%;
+   border-radius: 50%;
+   background: url('../img/bnt-carrossel.png') center;
+   background-size: contain;
+   cursor: pointer;
+   border: solid black 2px;
+   bottom: 4%;
+   left: 50%;
+}
+
+.bnt-carrossel:active {
+   background-color: #b13bff;
+   background-image: none;
+}
 
 /* Animação de transição carrossel */
 
 .avancar {
-   animation: avancar-carrossel 2s;
+   animation: avancar-carrossel 2s linear;
 
 }
 
 @keyframes avancar-carrossel {
 
    From {
-
-
-      top: 1700px;
+      margin-top: 0;
       opacity: 1;
-
 
    }
 
    to {
-
-      top: 1820px;
+      margin-top: 30%;
       opacity: 0;
-
 
    }
 }

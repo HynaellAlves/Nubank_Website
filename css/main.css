@@ -20,34 +20,36 @@ body {
 
 
 .img-meio {
-   width: 100%;
-   margin-top: 4%;
    display: flex;
-   margin-bottom: 20%;
+   width: 100%;
+   margin-top: 3%;
+   display: flex;
 
 }
 
 #div-nu-gif {
-
-   max-width: 45%;
-   max-height: 45%;
-   margin-left: 5%;
+   display: flex;
+   width: 50%;
+   justify-content: center;
 }
 
 #div-nu-gif img {
-   width: 100%;
+   width: 90%;
    border-radius: 50px;
 
 }
 
 #div-nu-semfundo {
-   max-width: 45%;
-   margin-left: 4%;
+   position: relative;
+   display: flex;
+   flex-wrap: wrap;
+   width: 50%;
+   justify-content: center;
 
 }
 
 #div-nu-semfundo img {
-   margin-left: 25%;
+   position: absolute;
    width: 50%;
 }
 
@@ -55,27 +57,26 @@ body {
 
 
 #sobre-nu {
+   position: absolute;
    font-family: 'Heebo', sans-serif;
    font-size: 17px;
-   margin-top: -11%;
-   margin-left: 11%;
    width: 80%;
    height: 60%;
    text-align: justify;
    color: white;
    text-shadow: 2px 2px 5px black;
+   bottom: 0;
 
 }
 
-.enfase {
+.enfase_SobreNu {
 
    font-size: 27px;
 
 }
 
 .enfase2 {
-   font-size: 27px;
-   color: #b43bff;
+   color: #c771fd;
    text-shadow: 0 0 10px rgb(142, 62, 247);
 
 
@@ -84,86 +85,110 @@ body {
 /* Ajustando janela de video */
 
 .nu-videos {
-   width: 70%;
+   margin-top: 8%;
+   display: flex;
+   width: 100%;
    border-radius: 10px;
-   height: 450px;
-   background: linear-gradient(#7c3ca7, #b997cf);
-   margin: 0 auto;
-   margin-bottom: 20%;
+   height: 530px;
+   align-items: center;
+   justify-content: center;
 
 }
 
 .nu-videos iframe {
-
-   width: 100%;
-   height: 100%;
+   width: 85%;
+   height: 90%;
    border-radius: 10px;
 
 }
 
 /* Rodapé da página */
 
+footer {
+   overflow: hidden;
+   margin-top: 10%;
+   height: 30vh;
+   max-height: 30vh;
+   background: linear-gradient(to left, #620bc7, #16012e);
+
+}
+
 .rodape {
    display: flex;
+   justify-content: center;
    width: 100%;
-   height: 180px;
-   background: linear-gradient(to left,#620bc7, #16012e);
+   height: 100%;
+   
 }
 
 .redes-sociais {
-   margin-left: 2%;
+   display: flex;
+   max-width: 5%;
+   flex-direction: column;
    max-height: 100%;
-   width: 5%;
+   justify-content: center;
+   align-items: center;
 
 }
 
-.links {
-   max-height: 100%;
+.links_redes {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   height: 100%;
    width: 13%;
 
 }
 
-.links p {
-   margin: 17px auto 0;
+.links_redes p {
+
+margin: 6% 0;
+
 
 }
 
-.links p a {
+.links {
    color: white;
-   font-size: 16px;
+   font-size: 17px;
    font-family: 'Heebo', sans-serif;
    text-decoration: none;
 
 }
 
 .icones {
-   margin: 13px auto 0 40%;
-   width: 26px;
+   width: 44%; 
 
 }
 
 .Nu-logo-rodape-customizada {
-   margin-left: 3%;
    overflow: hidden;
    display: flex;
-   width: 14%;
+   width: 20%;
    height: 100%;
+   align-items: center;
+   justify-content: center;
 
 }
 
 .Nu-logo-rodape-customizada img {
-   width: 120px;
+   width: 50%;
+   height: 60%;
    border-radius: 20px;
-   margin: 20px auto auto 15%;
+  
 
 }
 
-.rodape strong {
-   padding: 40px 0;
-   font-size: 18px;
+.rodape_strong {
+   display: flex;
+   width: 40%;
+   align-items: center;
+
+}
+
+.rodape_strong strong {
+   font-size: 17px;
    color: white;
    font-family: 'Heebo', sans-serif;
-   width: 40%;
 
 }
 
@@ -179,15 +204,13 @@ body {
 
 ::-webkit-scrollbar {
 
-   background-color: #b1b1b1;
-   width: 15px;
-   border: solid 0.3px black;
+   background-color: #8d31ca;
+   width: 8px;
 
 }
 
 ::-webkit-scrollbar-thumb {
 
    background-color: #3b065f;
-   border: solid 0.3px black;
 
 }
